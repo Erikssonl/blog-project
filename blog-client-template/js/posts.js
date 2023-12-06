@@ -17,7 +17,7 @@ async function fetchAllBlogPosts(){
                 <h3>${post.title}</h3>
                 <p>${post.author} <br> <span class="date"> ${postDate.getFullYear()}-${postDate.getMonth()+1}-${postDate.getDate()} ${postDate.toLocaleTimeString()}</span></p>
                 <p><span class="tags">tags: </span>${post.tags}</p> 
-                <div>${post.content.substring(0, 100) + "...."} <a href="#">Read more</a> </div>
+                <div>${post.content.substring(0, 100) + "...."} <a href="post.html?id=${post._id}">Read more</a> </div>
 
             </li>
 
