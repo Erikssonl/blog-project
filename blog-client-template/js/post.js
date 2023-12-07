@@ -21,7 +21,7 @@ async function fetchPost() {
             <p><span class="tags">tags: </span>${post.tags}</p> 
             <div>${post.content}</div>
             <br>
-            <a href="index.html"> Back </a>
+            <a href="index.html" <i class="fa fa-long-arrow-left" aria-hidden="true"></i>  Back </a>
         </div>
     `
 
