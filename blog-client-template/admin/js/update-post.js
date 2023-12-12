@@ -18,7 +18,15 @@ async function fetchPost() {
         document.getElementById('title').value = post.title;
         document.getElementById('author').value = post.author;
         document.getElementById('content-textarea').value = post.content;
-        // document.getElementById('tags').value = post.tags;
+
+        const select = document.getElementById('tags');
+        post.tags.forEach(tagValue => {
+            const option = select.querySelector(`option[value="${tagValue}"]`);
+            if (option) {
+                option.selected = true;
+            }
+        });
+
 
     } catch(error) {
         console.log(error)
@@ -37,7 +45,8 @@ async function updatePost(e) {
         let data = {
             "title": formData.get('title'),
             "author": formData.get('author'),
-            "content": formData.get('content')
+            "content": formData.get('content'),
+            "tags": getSelectedTags()
         };
 
         let response = await fetch('https://blog-api-assignment.up.railway.app/posts/' + urlParams.get('id'), {
@@ -55,6 +64,13 @@ async function updatePost(e) {
     } catch(error) {
         console.log(error)
     } 
+}
+
+function getSelectedTags() {
+    const select = document.getElementById('tags');
+    const selectedOptions = select.selectedOptions;
+    const tags = Array.from(selectedOptions).map(option => option.value);
+    return tags;
 }
 
 
