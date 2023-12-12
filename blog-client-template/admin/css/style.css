@@ -46,7 +46,7 @@ table, tr, td, th {
     color: #aaa;
 }
 
-#update-post-form{
+form{
     display: flex;
     flex-direction: column;
     flex-shrink: 1;
