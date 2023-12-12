@@ -4,9 +4,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <h1>This page is required for the VG grade</h1>
+    <!-- <h1>This page is required for the VG grade</h1> -->
+    <div id="container">
+        <nav id="main-nav">
+            <a href="../index.html">Blog page</a>
+        </nav>
+        <div id="back-link">
+            <a href="index.html"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> back</a>
+        </div>
+        
+        
+        <h1>Update blog post</h1>
+
+        <form id="update-post-form">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title">
+
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author">
+
+            <label for="content-textarea">Content</label>
+            <textarea name="content" id="content-textarea" cols="30" rows="15"></textarea>
+
+            <label for="tags">Tags</label>
+            <select id="tags" name="tags" size="7" multiple>
+                <option value="internet">Internet</option>
+                <option value="coding">Coding</option>
+                <option value="music">Music</option>
+                <option value="films">Films</option>
+                <option value="books">Books</option>
+                <option value="ai">AI</option>
+                <option value="sport">Sport</option>
+            </select>
+
+            <input type="submit" value="Update" id="update-btn">
+            
+        </form>
+
+    </div>
 
     <script src="js/create-post.js"></script>
 </body>
