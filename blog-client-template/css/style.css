@@ -19,7 +19,7 @@ html{
 
 #container h1,
 #blog-post{
-    padding-left: 40px;
+    padding: 0px 40px;
 }
 
 h1{
