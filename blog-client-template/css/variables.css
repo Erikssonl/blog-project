@@ -1,0 +1,28 @@
+:root {
+    /* Spacing */
+    --main-margin: 10px;
+    --main-padding: 5px;
+
+    /* Background colors */
+    --main-page-color: #c9c9c9;
+    --secondary-page-color: white;
+
+
+    /* Text colors */
+    --link-text-color: darkblue;
+    --link-hover-text-color: rgba(42, 42, 187, 0.692);
+    --date-text-color: #928e8e;
+
+    /* Borders */
+    --main-border-color: #ccc9c9;
+    --secondary-border-color: #333;
+    --main-border-radius: 15px;
+
+    --main-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    /* H1 style */
+    --h1-font-family: "Neuton";
+    --h1-font-weight: 100;
+    --h1-font-style: light;
+    --h1-font-size: 48px;
+}

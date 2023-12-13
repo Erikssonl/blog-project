@@ -1,5 +1,13 @@
+@import "../../css/variables.css";
+
 * {
     box-sizing: border-box;
+}
+
+html{
+    background-image: url('../../../img/background-img.webp');
+    background-size: cover;
+    background-attachment: fixed; 
 }
 
 #container {
@@ -9,31 +17,48 @@
 
 a {
     text-decoration: none;
-    color: darkblue;
+    color: var(--link-text-color);
 }
 
 a:hover {
     text-decoration: underline;
-    color: rgba(42, 42, 187, 0.692);
+    color: var(--link-hover-text-color);
 }
 
 #main-nav {
-    width: 100%;
-    border-bottom: 1px solid #5a5a5a;
+    border-bottom: 1px solid var(--secondary-border-color);
 }
 
 #main-nav,
-#create-link {
+#second-nav {
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
 }
 
+h1{
+    font-family: var(--h1-font-family);
+    font-weight: var(--h1-font-weight);
+    font-style: var(--h1-font-style);
+    font-size: var(--h1-font-size);
+}
+
 table, tr, td, th {
+    background-color: var(--secondary-page-color);
     width: 100%;
-    margin-top: 10px;
-    border: 1px solid #333;
-    border-collapse: collapse;
-    padding: 5px;
+    margin-top: var(--main-margin);
+    padding: 10px;
+}
+
+table{
+    box-shadow: var(--main-box-shadow);
+    border-radius: var(--main-border-radius);
+}
+
+tr, td, th{
+    text-align: left;
+    border-bottom: 2px solid var(--main-border-color);
+
 }
 
 .tags,
@@ -41,10 +66,6 @@ table, tr, td, th {
     font-weight: 600;
 }
 
-.date {
-    font-style: italic;
-    color: #aaa;
-}
 
 form{
     display: flex;
@@ -54,18 +75,29 @@ form{
 
 label{
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input,
 textarea,
 select{
-    margin-bottom: 10px;
+    margin-bottom: var(--main-margin);
+    padding: 10px;
+    box-shadow: var(--main-box-shadow);
+    border: none;
+    border-radius: var(--main-border-radius);    
 }
 
 #back-link{
-    margin-top: 10px;
+    margin-top: var(--main-margin);
 }
 
 select{
     overflow: hidden;
+}
+
+option:hover,
+#update-btn:hover,
+#create-btn:hover{
+    background-color: rgba(42, 42, 187, 0.692);
 }
