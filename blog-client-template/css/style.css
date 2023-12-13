@@ -1,37 +1,65 @@
+@import "variables.css";
+
 * {
     box-sizing: border-box;
 }
-
-#container {
-    width: 800px;
+html{
+    background-color: var(--main-page-color);
+}
+#container,
+#post-container {
+    width: 60%;
     margin: 20px auto;
+}
+
+#container h1,
+#blog-post{
+    padding-left: 40px;
+}
+
+h1{
+    font-family: var(--h1-font-family);
+    font-weight: var(--h1-font-weight);
+    font-style: var(--h1-font-style);
+    font-size: var(--h1-font-size);
+}
+
+#blog-post{
+    padding-bottom: 20px;
+    background-color: var(--secondary-page-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 a {
     text-decoration: none;
-    color: darkblue;
+    color: var(--link-text-color);
 }
 
 a:hover {
     text-decoration: underline;
-    color: rgba(42, 42, 187, 0.692);
+    color: var(--link-hover-text-color);
 }
 
 #main-nav {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
-    border-bottom: 1px solid #5a5a5a;
+    border-bottom: 1px solid var(--main-border-color);
+}
+
+h3{
+    margin: 0px;
 }
 
 #blog-list li {
     list-style: none;
     width: 100%;
-    padding: 5px;
-    border-bottom: 4px dotted #000000;
-    /* background-color: white; */
-    /* display: flex; */
-    /* justify-content: space-between; */
+    background-color: var(--secondary-page-color);
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .tags,
@@ -41,5 +69,5 @@ a:hover {
 
 .date {
     font-style: italic;
-    color: #aaa;
+    color: var(--date-text-color);
 }

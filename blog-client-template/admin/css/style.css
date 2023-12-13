@@ -1,5 +1,13 @@
+@import "../../css/variables.css";
+
 * {
     box-sizing: border-box;
+}
+
+html{
+    background-image: url('../../../img/background-img.webp');
+    background-size: cover;
+    background-attachment: fixed; 
 }
 
 #container {
@@ -9,31 +17,49 @@
 
 a {
     text-decoration: none;
-    color: darkblue;
+    color: var(--link-text-color);
 }
 
 a:hover {
     text-decoration: underline;
-    color: rgba(42, 42, 187, 0.692);
+    color: var(--link-hover-text-color);
 }
 
 #main-nav {
-    width: 100%;
-    border-bottom: 1px solid #5a5a5a;
+    border-bottom: 1px solid var(--main-border-color);
 }
 
 #main-nav,
-#create-link {
+#second-nav {
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
 }
 
+h1{
+    font-family: var(--h1-font-family);
+    font-weight: var(--h1-font-weight);
+    font-style: var(--h1-font-style);
+    font-size: var(--h1-font-size);
+}
+
 table, tr, td, th {
+    background-color: var(--secondary-page-color);
     width: 100%;
-    margin-top: 10px;
-    border: 1px solid #333;
-    border-collapse: collapse;
-    padding: 5px;
+    margin-top: var(--main-margin);
+    padding: 10px;
+}
+
+table{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* border-collapse: collapse; */
+    border-radius: 15px;
+}
+
+tr, td, th{
+    border-bottom: 1px solid var(--main-border-color);
+    border-right: 1px solid var(--main-border-color);;
+    /* border-collapse: collapse; */
 }
 
 .tags,
@@ -41,10 +67,6 @@ table, tr, td, th {
     font-weight: 600;
 }
 
-.date {
-    font-style: italic;
-    color: #aaa;
-}
 
 form{
     display: flex;
@@ -59,11 +81,11 @@ label{
 input,
 textarea,
 select{
-    margin-bottom: 10px;
+    margin-bottom: var(--main-margin);
 }
 
 #back-link{
-    margin-top: 10px;
+    margin-top: var(--main-margin);
 }
 
 select{
