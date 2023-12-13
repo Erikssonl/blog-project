@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 html{
-    background-color: var(--main-page-color);
+    /* background-color: var(--main-page-color); */
+    background-image: url('../../../img/');
 }
 #container,
 #post-container {
