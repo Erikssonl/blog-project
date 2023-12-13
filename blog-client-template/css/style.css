@@ -5,8 +5,12 @@
 }
 html{
     /* background-color: var(--main-page-color); */
-    background-image: url('../../../img/');
+    background-image: url('../../img/background-blog-page.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
 }
+
 #container,
 #post-container {
     width: 60%;
@@ -28,7 +32,7 @@ h1{
 #blog-post{
     padding-bottom: 20px;
     background-color: var(--secondary-page-color);
-    border-radius: 15px;
+    border-radius: var(--main-border-radius);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -46,7 +50,7 @@ a:hover {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
-    border-bottom: 1px solid var(--main-border-color);
+    border-bottom: 1px solid var(--secondary-border-color);
 }
 
 h3{
@@ -59,8 +63,8 @@ h3{
     background-color: var(--secondary-page-color);
     margin-bottom: 40px;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--main-box-shadow);
 }
 
 .tags,

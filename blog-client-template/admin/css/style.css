@@ -26,7 +26,7 @@ a:hover {
 }
 
 #main-nav {
-    border-bottom: 1px solid var(--main-border-color);
+    border-bottom: 1px solid var(--secondary-border-color);
 }
 
 #main-nav,
@@ -51,15 +51,14 @@ table, tr, td, th {
 }
 
 table{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* border-collapse: collapse; */
-    border-radius: 15px;
+    box-shadow: var(--main-box-shadow);
+    border-radius: var(--main-border-radius);
 }
 
 tr, td, th{
-    border-bottom: 1px solid var(--main-border-color);
-    border-right: 1px solid var(--main-border-color);;
-    /* border-collapse: collapse; */
+    text-align: left;
+    border-bottom: 2px solid var(--main-border-color);
+
 }
 
 .tags,
@@ -76,12 +75,17 @@ form{
 
 label{
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input,
 textarea,
 select{
     margin-bottom: var(--main-margin);
+    padding: 10px;
+    box-shadow: var(--main-box-shadow);
+    border: none;
+    border-radius: var(--main-border-radius);    
 }
 
 #back-link{
@@ -90,4 +94,10 @@ select{
 
 select{
     overflow: hidden;
+}
+
+option:hover,
+#update-btn:hover,
+#create-btn:hover{
+    background-color: rgba(42, 42, 187, 0.692);
 }
